@@ -1,7 +1,5 @@
 # Claims Verifier
 
-Procedural pilot complete. External math evaluation in progress. Fact-checking planned.
-
 AI research has long debated whether to follow symbolic reasoning or biologically inspired learning mechanisms. We explore how these directions can work together by training neural networks to learn symbolic representations. Our goal is for a network to represent the terms, components, and relationships in a sentence or paragraph using symbols, then generate a structured map that supports logical computation to derive the desired answer.
 
 In this pilot study, we train on verifiable mathematics, programming, and logic tasks. We compare training with verified symbolic maps and answers against supervised fine-tuning that computes loss only on the target answers. On 1,500 held-out tasks, our method achieves 31.3% final-answer accuracy, compared with 21.7% for the answer-only baseline.
