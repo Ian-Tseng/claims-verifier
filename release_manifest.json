@@ -23,7 +23,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6ef37fdb7ac59009c08617bb85b1641b18228a028dbd33e38b7f7d3a93eec83b"
+      "sha256": "9f00c156d8b894c0f5626a0575ed13438ea49e8566fc4ecded50ca129ebf7f26"
     },
     {
       "path": "architecture.mmd",
@@ -55,7 +55,7 @@
     },
     {
       "path": "docs/approved_introduction.md",
-      "sha256": "5f80d1a5dc29db23ec1dc8c476f809d7294c5618230546d329c3749a7659f036"
+      "sha256": "6df095c699e2a63fd119afc87e5b4626f7a9910bdf1ca2430a5b72b57efaf867"
     },
     {
       "path": "example_usage.py",
