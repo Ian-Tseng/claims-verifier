@@ -1,0 +1,12 @@
+{
+  "question": "A box contains 3 red balls and 2 blue balls. How many balls are in the box?",
+  "map": {
+    "components": {
+      "left": 3,
+      "right": 2
+    },
+    "operation": "add"
+  },
+  "expected_answer": 5,
+  "provenance": "Hand-authored educational example; not a model output or benchmark task."
+}

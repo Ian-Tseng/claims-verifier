@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.pem
+*.key
+# Private implementation and generated experiment artifacts never belong here.
+src/
+private/
+core/
+artifacts/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.log
+scripts/
+configs/
+tests/

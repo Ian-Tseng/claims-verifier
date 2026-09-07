@@ -1,0 +1,14 @@
+flowchart TB
+  subgraph TRAIN["Pilot training - private implementation"]
+    T["Procedural task + public inputs"] --> M["Qwen3-8B candidate map + answer"]
+    M --> V["Task executor checks candidate"]
+    V -->|"accepted"| S["Map + answer supervision"]
+    V -->|"correction needed"| O["Oracle-assisted corrected target"]
+    O --> M
+    T --> A["Answer-only supervision - control"]
+  end
+  S --> C["Select checkpoint on development answers"]
+  A --> C
+  C --> E["Held-out task - model-generated answer"]
+  E --> R["Post-generation scoring - aggregate results"]
+  R -.-> F["Future: claims + evidence - symbolic verification"]

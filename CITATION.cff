@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this public research showcase when referring to these materials."
+type: software
+title: "Claims Verifier"
+authors:
+  - name: "Ian-Tseng"
+repository-code: "https://github.com/Ian-Tseng/claims-verifier"
+url: "https://github.com/Ian-Tseng/claims-verifier"
+version: "0.1.0"
+date-released: "2026-09-07"
+license: MIT
+abstract: "Public research showcase of a procedural reasoning pilot and planned claim-verification extension. Core implementation and trained weights are not included."
