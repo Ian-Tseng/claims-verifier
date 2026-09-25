@@ -72,7 +72,7 @@ E6 started from Original Qwen3-8B with a fresh LoRA adapter and trained for 100 
 | Logic | 88 / 100 | 88.00% | 87 / 100 |
 | **Total** | **268 / 300** | **89.33%** | **267 / 300** |
 
-All 300 outputs parsed as JSON; none hit the generation cap. This is a single-seed automated development result with zero expert reviews. The matched Original evaluation was incomplete at release preparation, so this release makes no superiority claim against Original on these 300 tasks. Do not compare this percentage directly with the earlier E1 test percentage. Reliable transfer to unseen sources remains a research objective.
+All 300 outputs parsed as JSON; none hit the generation cap. This is a single-seed automated development result with zero expert reviews. On the same 300 development tasks with matched prompts, decoding and scoring, **Original Qwen3-8B scored 69/300 (23.00%)**, compared with **E6's 268/300 (89.33%)**. Both completed runs passed saved-response identity and score-replay checks. Do not compare this percentage directly with the earlier E1 test percentage. Reliable transfer to unseen sources remains a research objective.
 
 This package supports task reuse and execution/scoring of supplied targets and new predictions. It does not contain trained adapters, raw model responses, the full generator, or the training pipeline; it is not by itself a complete reproduction of training or the reported model accuracy. The validator cannot independently reproduce an aggregate model result without its predictions and checkpoint.
 

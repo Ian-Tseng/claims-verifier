@@ -2,14 +2,14 @@
 
 ## E6: custom development tasks
 
-E6 was trained on 1,500 synthetic tasks and evaluated at the fixed update-100 checkpoint on 300 different, previously inspected development instances from familiar families. The matched Original Qwen3-8B comparison is pending completion and verification.
+E6 was trained on 1,500 synthetic tasks and evaluated at the fixed update-100 checkpoint on 300 different, previously inspected development instances from familiar families. On the same 300 development tasks with matched prompts, decoding and scoring, **Original Qwen3-8B scored 69/300 (23.00%)**, compared with **E6's 268/300 (89.33%)**. Both completed runs passed saved-response identity and score-replay checks.
 
 | Domain | E6 correct / tasks | E6 accuracy | Original |
 |---|---:|---:|---|
-| Math | 98 / 100 | 98.00% | Pending |
-| Programming | 82 / 100 | 82.00% | Pending |
-| Logic | 88 / 100 | 88.00% | Pending |
-| **Overall** | **268 / 300** | **89.33%** | **Pending** |
+| Math | 98 / 100 | 98.00% | 50 / 100 (50.00%) |
+| Programming | 82 / 100 | 82.00% | 19 / 100 (19.00%) |
+| Logic | 88 / 100 | 88.00% | 0 / 100 (0.00%) |
+| **Overall** | **268 / 300** | **89.33%** | 69 / 300 (23.00%) |
 
 ![E6 development results](../figures/e6_results.png)
 
@@ -21,7 +21,7 @@ E6 answers **268/300 development tasks correctly (89.33%)**. It performs best on
 
 **Answer accuracy and map validity are different outcomes.** All 300 outputs parse as JSON; 267 satisfy the strict reference-map contract. A valid map must match the supported task-bound structure. This count does not establish faithful interpretation of arbitrary paragraphs, and correct final answers do not necessarily contain valid maps.
 
-**The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control remains incomplete. Once verified, that comparison will measure the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It will not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
+**The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control has completed and passed replay. This comparison measures the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It will not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
 
 **Transfer remains unresolved.** Success here does not establish useful gains on unfamiliar source material, MATH-500, or fact verification. Source-to-map translation, execution, evidence selection and output-format failures remain competing explanations. We plan to measure those stages separately before choosing targeted changes; these diagnostics are not evidence that the transfer gap is already solved.
 
@@ -81,3 +81,5 @@ This is a single-seed procedural pilot. It does not establish biological plausib
 - [Aggregate provenance](provenance.json)
 
 The private experiment stores raw responses, completion records, and source identities. The public snapshot contains aggregate results only, so its hashes support version tracking without providing an independently executable reproduction.
+
+Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wrong=32. See [comparison evidence](../datasets/e6_custom_v1/matched_comparison.json).

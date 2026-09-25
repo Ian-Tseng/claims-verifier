@@ -1,0 +1,104 @@
+{
+  "protocol": "matched-original-e6-custom-development-v1",
+  "rows": 300,
+  "audit_passed": true,
+  "audited_at": "2026-09-25T20:11:18.547100+08:00",
+  "audit_method": "600 saved responses checked for identity and replayed using the shared frozen scorer; not independent scientific replication",
+  "original_summary": {
+    "arm": "original",
+    "rows": 300,
+    "total": 300,
+    "groups": {
+      "all": {
+        "rows": 300,
+        "answer_correct": 69,
+        "json_valid": 284,
+        "set_reference_contract_valid": 0,
+        "cap_hits": 0
+      },
+      "math": {
+        "rows": 100,
+        "answer_correct": 50,
+        "json_valid": 92,
+        "set_reference_contract_valid": 0,
+        "cap_hits": 0
+      },
+      "programming": {
+        "rows": 100,
+        "answer_correct": 19,
+        "json_valid": 92,
+        "set_reference_contract_valid": 0,
+        "cap_hits": 0
+      },
+      "logic": {
+        "rows": 100,
+        "answer_correct": 0,
+        "json_valid": 100,
+        "set_reference_contract_valid": 0,
+        "cap_hits": 0
+      }
+    },
+    "scientific_config_hash": "d6cadf7b5b1bfd7ef4f0bdffe04bd57edcaac4e28b1c221011c7d8db21e1468e",
+    "observed_at": "2026-09-25T20:07:05.111238+08:00",
+    "paper_table_eligible": false
+  },
+  "e6_summary": {
+    "arm": "e6_set",
+    "update": 100,
+    "rows": 300,
+    "total": 300,
+    "groups": {
+      "all": {
+        "rows": 300,
+        "answer_correct": 268,
+        "json_valid": 300,
+        "set_reference_contract_valid": 267,
+        "cap_hits": 0
+      },
+      "math": {
+        "rows": 100,
+        "answer_correct": 98,
+        "json_valid": 100,
+        "set_reference_contract_valid": 98,
+        "cap_hits": 0
+      },
+      "programming": {
+        "rows": 100,
+        "answer_correct": 82,
+        "json_valid": 100,
+        "set_reference_contract_valid": 82,
+        "cap_hits": 0
+      },
+      "logic": {
+        "rows": 100,
+        "answer_correct": 88,
+        "json_valid": 100,
+        "set_reference_contract_valid": 87,
+        "cap_hits": 0
+      }
+    },
+    "observed_at": "2026-09-25T19:25:45.538389+08:00",
+    "scientific_config_hash": "383f0dc6970c13169b12541f918f94c104031ba67d9ed3da4168597016ec5f4b"
+  },
+  "paired_verdict": {
+    "both_correct": 69,
+    "original_only": 0,
+    "e6_only": 199,
+    "both_wrong": 32
+  },
+  "accuracy_delta_percentage_points": 66.33333333333333,
+  "same_ordered_task_ids": true,
+  "same_parent_protocol": true,
+  "evidence_scope": "single-seed, previously inspected familiar-family development; no claim of unseen-source transfer or causal set-map benefit",
+  "source_hashes": {
+    "original_records": "e45d4571b6308a2d8f0699ddafec93ad5f55c0327a741fe9f8ff76bf537e38a7",
+    "e6_records": "d51ab46651bbda92dd360a9fcdce4e696d65595e8b8055538a118ca46e88f2f0",
+    "development": "9aad96c7fefdabdea8b06cdf13aef1e761e333e8dd6f2d1327df00ae67bbabd0"
+  },
+  "limits": [
+    "No new expert review",
+    "No independent replication",
+    "No claim of held-out unfamiliar-source performance",
+    "Base-model pretraining overlap unknown"
+  ]
+}

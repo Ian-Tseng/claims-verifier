@@ -2,7 +2,7 @@
 
 We study whether language models can learn computable representations of a problem and use them to produce verifiable answers. Our goal is to extend this approach to claims and evidence in source material.
 
-E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and logic tasks** using set-based representations. At the fixed update-100 checkpoint, it answered **268 of 300 development tasks correctly (89.33%)**. These were separate instances of familiar task families, previously inspected during development. The matched Original Qwen3-8B comparison is still being completed.
+E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and logic tasks** using set-based representations. At the fixed update-100 checkpoint, it answered **268 of 300 development tasks correctly (89.33%)**. These were separate instances of familiar task families, previously inspected during development. On the same 300 development tasks with matched prompts, decoding and scoring, **Original Qwen3-8B scored 69/300 (23.00%)**, compared with **E6's 268/300 (89.33%)**. Both completed runs passed saved-response identity and score-replay checks.
 
 This result shows performance within the custom task families; reliable transfer to unseen source material remains an open research problem. We are investigating source-to-representation translation, execution and output-format failures separately.
 

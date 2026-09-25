@@ -46,13 +46,17 @@
       "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685",
       "bytes": 1056
     },
+    "matched_comparison.json": {
+      "sha256": "1707548ec670a4b3051f8dd3f4b1859429d793e2862dc232c24492d24256eeea",
+      "bytes": 3087
+    },
     "protocol.json": {
       "sha256": "74b3860ef0ca806f455fe5ca8403859a4236f85c7215f76964eb07321ffb86d7",
       "bytes": 1737
     },
     "README.md": {
-      "sha256": "82aa91bc14cabd0a32a7f053d8e0f58cd6386629a5fe4b1003f79c92cc1ee3a6",
-      "bytes": 6823
+      "sha256": "05a9498db68d099fa4fcc993e036c53342aaad60a43f7910491cb76763adcf5f",
+      "bytes": 6913
     },
     "train.jsonl": {
       "sha256": "755de07d91bd88235e878e434ffbdcdb675af20ab01cdea390d1a31d25a6b08c",
@@ -162,8 +166,8 @@
   "base_model_pretraining_overlap": "unknown",
   "not_claimed": [
     "unseen-source transfer",
-    "matched Original superiority on this cohort",
     "powerset-only arithmetic",
     "full training reproducibility from this package alone"
-  ]
+  ],
+  "matched_comparison_available": true
 }
