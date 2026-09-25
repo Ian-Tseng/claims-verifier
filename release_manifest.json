@@ -23,7 +23,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "735668cfd0309aff08e5439a13e06504a521e77224639b9dea1df5cc60bfc5bd"
+      "sha256": "5fb67c01fd067ccf8433c02d0c1a0ab54aaf1f4ef5377f90d662344896a2f5fd"
     },
     {
       "path": "architecture.mmd",
@@ -39,7 +39,7 @@
     },
     {
       "path": "benchmarks/README.md",
-      "sha256": "53ff4f0cd8594a81f6a5b7bae7c6edc5d8ff106981ddd9031deca95fd0975837"
+      "sha256": "f62ef2be82ae074557718a1ec5065ea5f7aedeb6c4ce64133fbd787ad6774845"
     },
     {
       "path": "datasets/__init__.py",
@@ -127,7 +127,7 @@
     },
     {
       "path": "results/README.md",
-      "sha256": "36deeb1617abcd9f418b7ba13b4d5ee9957cfc4d53042ec455129a6c59eca62f"
+      "sha256": "90816dd3afdf51fe34c9a6aed879ba3ee2fb9bb988f17c844f5df191050f7404"
     },
     {
       "path": "results/logic_wrapper_diagnostic.json",

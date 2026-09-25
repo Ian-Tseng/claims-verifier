@@ -1,4 +1,4 @@
-# Pilot results
+# E6 results
 
 ## E6: custom development tasks
 

@@ -16,7 +16,7 @@ python -B -m datasets.e6_custom_v1.dataset validate
 
 ![E6 development results](figures/e6_results.png)
 
-- [Pilot results](results/README.md): Matched Original/E6 development results.
+- [E6 results](results/README.md): Matched Original/E6 development results.
 - [Benchmark status](benchmarks/README.md): completed evaluations, pending comparisons and transfer limits.
 - [Illustration](demo/index.html): a standalone symbolic-computation demo; download and open it in a browser. It does not run the trained model.
 
