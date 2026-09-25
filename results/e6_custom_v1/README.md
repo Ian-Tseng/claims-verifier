@@ -8,4 +8,4 @@
 
 Read the [result interpretation](../README.md#result-interpretation) before comparing numbers. These are aggregates from single-seed, previously inspected development evaluations. Raw model responses and checkpoints are not distributed here, so aggregate consistency is not independent scientific replication.
 
-Evaluation task inputs and gold answers are in [datasets/e6_evaluation_v1](../../datasets/e6_evaluation_v1/README.md). Training records, method-specific prompts, reference maps and the executor are excluded from the current release. File integrity is recorded in the root [release manifest](../../release_manifest.json).
+Evaluation task inputs and gold answers are in [datasets/e6_evaluation_v1](../../datasets/e6_evaluation_v1/README.md). A separate [1,500-task training export](../../datasets/e6_training_tasks_v1/README.md) includes task inputs and gold answers only. Complete method-specific training records, prompts, reference maps and the executor remain excluded. File integrity is recorded in the root [release manifest](../../release_manifest.json).

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "dataset_version": "e6_training_tasks_v1",
+  "release_date": "2026-09-25",
+  "disclosure": "limited-disclosure",
+  "scope": "training task inputs and gold answers only",
+  "split": "train",
+  "rows": 1500,
+  "domains": {
+    "math": 500,
+    "programming": 500,
+    "logic": 500
+  },
+  "fields": [
+    "id",
+    "domain",
+    "operation",
+    "problem",
+    "inputs",
+    "answer"
+  ],
+  "training_task_inputs_included": true,
+  "gold_answers_included": true,
+  "method_specific_training_targets_included": false,
+  "method_prompts_included": false,
+  "reference_maps_included": false,
+  "executor_included": false,
+  "exact_experiment_reproduction": false,
+  "source_train_sha256": "755de07d91bd88235e878e434ffbdcdb675af20ab01cdea390d1a31d25a6b08c",
+  "files": {
+    "train.jsonl": {
+      "sha256": "26eb1ac04a316a8278c43d2802c5838adf493392b5d59e25a6aaaf4a97ac1762",
+      "bytes": 507073
+    },
+    "README.md": {
+      "sha256": "e0d32e33b4ab9ec0c774e1d6bfc42c6f98121eed305454ae65520bf435d3359e",
+      "bytes": 1827
+    }
+  }
+}

@@ -6,7 +6,7 @@ authors:
   - name: "Ian-Tseng"
 repository-code: "https://github.com/Ian-Tseng/claims-verifier"
 url: "https://github.com/Ian-Tseng/claims-verifier"
-version: "0.2.1"
+version: "0.2.2"
 date-released: "2026-09-25"
 license: MIT
-abstract: "E6 custom development results and evaluation task inputs with gold answers. Training records, method-specific prompts, reference maps, executor, full pipeline and weights are not included."
+abstract: "E6 custom development results and a limited-disclosure release of 1,500 training and 300 development task inputs with gold answers. Method-specific training targets, method-specific prompts, reference maps, executor, full pipeline and weights are not included."

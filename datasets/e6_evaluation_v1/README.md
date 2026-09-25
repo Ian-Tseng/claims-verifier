@@ -1,6 +1,6 @@
 # E6 evaluation tasks and gold answers
 
-This evaluation-only release contains **300 custom development tasks**, with 100 each in mathematics, programming and finite-set logic. It includes task inputs and gold answers only. Training records, method-specific prompts, operator codebooks, reference maps, training configuration and executors are excluded.
+This evaluation-only release contains **300 custom development tasks**, with 100 each in mathematics, programming and finite-set logic. It includes task inputs and gold answers only. This file contains no training tasks. A separate [training-task release](../e6_training_tasks_v1/README.md) provides 1,500 task inputs and gold answers. Method-specific training targets, prompts, operator codebooks, reference maps, training configuration and executors are excluded from both.
 
 | File | Contents |
 |---|---|
@@ -14,4 +14,4 @@ These tasks were previously inspected during development and cover familiar task
 
 The [reported results](../../results/README.md) remain unchanged. This release supports independent testing on the same task content, not reproduction of training or the exact experiment. Record your model, prompts, decoding settings and scoring rule when reporting new results. Cite the repository commit and this manifest hash. The repository's MIT license covers the supplied evaluation materials.
 
-See the [dataset overview](../README.md#what-would-a-training-example-look-like) for a placeholder illustrating the distinction between public evaluation records and private training targets. No real training example is shown.
+See the [dataset overview](../README.md#what-would-a-training-example-look-like) for a placeholder illustrating the distinction between public evaluation records and private training targets. No actual representation-training target is shown.

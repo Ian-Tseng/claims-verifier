@@ -21,7 +21,7 @@ All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. An
 
 E6 answers **268/300 development tasks correctly (89.33%)**. It performs best on math (98/100), followed by logic (88/100) and programming (82/100). The domain differences identify where this custom-task evaluation succeeds and where errors remain.
 
-**Answer accuracy and map validity are different outcomes.** All 300 outputs parse as JSON; 267 satisfy the strict reference-map contract. A valid map must match the supported task-bound structure. This count does not establish faithful interpretation of arbitrary paragraphs, and correct final answers do not necessarily contain valid maps.
+**Answer accuracy and map validity are different outcomes.** All 300 E6 outputs parse as JSON; 267 satisfy the strict reference-map contract. A valid map must match the supported task-bound structure. This count does not establish faithful interpretation of arbitrary paragraphs, and correct final answers do not necessarily contain valid maps.
 
 **The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control has completed and passed replay. This comparison measures the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It does not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
 
