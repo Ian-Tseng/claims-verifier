@@ -6,11 +6,7 @@ E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and log
 
 These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
-The [dataset and reusable tools](datasets/e6_custom_v1/README.md) include prompts, reference maps, answers, a bounded executor and scoring utilities. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the comparison and its limitations.
-
-```bash
-python -B -m datasets.e6_custom_v1.dataset validate
-```
+The [evaluation dataset](datasets/e6_evaluation_v1/README.md) contains 300 task inputs and gold answers for independent testing. Training data, method-specific prompts, reference maps and the executor are excluded. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the reported comparison and its limitations.
 
 ![E6 architecture and evaluation boundary](architecture.png)
 
@@ -30,7 +26,7 @@ This release does not report downstream fact-verification comparisons or establi
 
 | Folder | Contents |
 |---|---|
-| [datasets](datasets/README.md) | Frozen training/development data, loader, scorer and provenance |
+| [datasets](datasets/README.md) | Evaluation task inputs, gold answers and task definitions |
 | [results](results/README.md) | Current E6 comparison, result evidence and interpretation |
 | [figures](figures/README.md) | Rendered results and the figure generator; architecture images are at the root |
 | [docs](docs/E6_TECHNICAL_REPORT.md) | Technical report and release boundary |
@@ -38,4 +34,4 @@ This release does not report downstream fact-verification comparisons or establi
 
 ## License and citation
 
-The [MIT license](LICENSE) covers the materials supplied in this public repository, including its educational demonstrations and the E6 synthetic dataset and utilities. The full training pipeline and model weights are not included. Third-party models and datasets retain their own licenses. See [CITATION.cff](CITATION.cff) for a repository citation; this project does not claim an accepted paper or DOI.
+The [MIT license](LICENSE) covers the materials supplied in this public repository, including its educational demonstrations and E6 evaluation data. The full training pipeline and model weights are not included. Third-party models and datasets retain their own licenses. See [CITATION.cff](CITATION.cff) for a repository citation; this project does not claim an accepted paper or DOI.

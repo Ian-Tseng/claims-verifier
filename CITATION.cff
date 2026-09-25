@@ -6,7 +6,7 @@ authors:
   - name: "Ian-Tseng"
 repository-code: "https://github.com/Ian-Tseng/claims-verifier"
 url: "https://github.com/Ian-Tseng/claims-verifier"
-version: "0.2.0"
+version: "0.2.1"
 date-released: "2026-09-25"
 license: MIT
-abstract: "Public research showcase with the E6 custom synthetic dataset, reusable bounded executor and development protocol. The full training pipeline and trained weights are not included."
+abstract: "E6 custom development results and evaluation task inputs with gold answers. Training records, method-specific prompts, reference maps, executor, full pipeline and weights are not included."

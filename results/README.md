@@ -13,7 +13,7 @@ E6 was trained on 1,500 synthetic tasks and evaluated at the fixed update-100 ch
 
 ![E6 development results](../figures/e6_results.png)
 
-All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. Answer correctness is scored separately from map validity. These are single-seed development results, not evidence of reliable transfer to unseen source material or a causal benefit from set representations. See the [dataset and protocol](../datasets/e6_custom_v1/README.md) and [saved aggregate](e6_custom_v1/e6_update100_summary.json).
+All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. Answer correctness is scored separately from map validity. These are single-seed development results, not evidence of reliable transfer to unseen source material or a causal benefit from set representations. See the [evaluation dataset](../datasets/e6_evaluation_v1/README.md) and [saved aggregate](e6_custom_v1/e6_update100_summary.json).
 
 ## Result interpretation
 
@@ -36,6 +36,6 @@ Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wro
 - [Matched Original/E6 aggregate](e6_custom_v1/matched_comparison.json)
 - [E6 update100 summary](e6_custom_v1/e6_update100_summary.json)
 - [Output-format diagnostic](e6_custom_v1/logic_wrapper_diagnostic.json)
-- [Dataset and protocol](../datasets/e6_custom_v1/README.md)
+- [Evaluation dataset](../datasets/e6_evaluation_v1/README.md)
 
-The release includes reference targets and utilities, but not the full trainer, model weights or raw evaluation responses. Saved-output replay is not independent reproduction of training or inference.
+The current release includes evaluation task inputs and gold answers. It excludes training data, method-specific prompts, reference maps, the executor, model weights and raw evaluation responses. Saved-output replay is not independent reproduction of training or inference.

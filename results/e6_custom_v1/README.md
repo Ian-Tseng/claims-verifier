@@ -8,4 +8,4 @@
 
 Read the [result interpretation](../README.md#result-interpretation) before comparing numbers. These are aggregates from single-seed, previously inspected development evaluations. Raw model responses and checkpoints are not distributed here, so aggregate consistency is not independent scientific replication.
 
-Training data, prompts, reference targets and the loader remain in [datasets/e6_custom_v1](../../datasets/e6_custom_v1/README.md). File integrity is recorded in the root [release manifest](../../release_manifest.json).
+Evaluation task inputs and gold answers are in [datasets/e6_evaluation_v1](../../datasets/e6_evaluation_v1/README.md). Training records, method-specific prompts, reference maps and the executor are excluded from the current release. File integrity is recorded in the root [release manifest](../../release_manifest.json).

@@ -12,4 +12,4 @@ The strict comparison includes output-format failures. See the [format diagnosti
 
 These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
-See [current E6 results](../results/README.md) and [reusable E6 dataset](../datasets/e6_custom_v1/README.md).
+See [current E6 results](../results/README.md) and [E6 evaluation tasks](../datasets/e6_evaluation_v1/README.md).

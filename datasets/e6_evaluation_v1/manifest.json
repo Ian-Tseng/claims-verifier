@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "dataset_version": "e6_evaluation_v1",
+  "release_date": "2026-09-25",
+  "scope": "evaluation task inputs and gold answers only",
+  "rows": 300,
+  "domains": {
+    "math": 100,
+    "programming": 100,
+    "logic": 100
+  },
+  "fields": [
+    "id",
+    "domain",
+    "operation",
+    "problem",
+    "inputs",
+    "answer"
+  ],
+  "training_records_included": false,
+  "method_prompts_included": false,
+  "reference_maps_included": false,
+  "executor_included": false,
+  "exact_experiment_reproduction": false,
+  "development_exposure": "Previously inspected familiar-family development; not an untouched held-out test",
+  "source_development_sha256": "9aad96c7fefdabdea8b06cdf13aef1e761e333e8dd6f2d1327df00ae67bbabd0",
+  "files": {
+    "development.jsonl": {
+      "sha256": "1922ed1dfc892db17b237d32e23b26aca3a840e5078d0e347c87d5e67636f968",
+      "bytes": 98602
+    },
+    "TASKS.md": {
+      "sha256": "0f3fbcd7144cceef3fc5c51afbcaa4698ff4dd326717cbfe7183fa21f3fc3abc",
+      "bytes": 2133
+    },
+    "README.md": {
+      "sha256": "dfb799f083422991e754c229e63ebc51cb6ca7441734a73f4743838bc135c2a8",
+      "bytes": 1809
+    }
+  }
+}
