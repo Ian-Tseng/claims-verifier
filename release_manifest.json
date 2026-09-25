@@ -11,7 +11,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "b006797cdc4a728b0ed999afc11c2547cb4595b728b540cb1a0d19776772b330"
+      "sha256": "1ab9ef0ac54d7b5d3515de7489000c7742199b0dc648d922076f00253d7a191e"
     },
     {
       "path": "CITATION.cff",
@@ -23,7 +23,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "9e4c6e417b02699cc4304a852500985e1b486b6ff1608d7caddf833b8b7e79d2"
+      "sha256": "429b93959be03ffc8af856eb021ca7b329db8ecc1ea230b144094d929fff20bd"
     },
     {
       "path": "architecture.mmd",
@@ -35,11 +35,11 @@
     },
     {
       "path": "architecture.svg",
-      "sha256": "31312511dd1f906bb226417f5073485635a2bd3d6b91d923237a0eece3b58054"
+      "sha256": "e52ea6843a3ef48a7ce1db8f92b15b887f490459a7abb8a12563ba888bd7964f"
     },
     {
       "path": "benchmarks/README.md",
-      "sha256": "3f32dbbb70f232e17a4f7575246a973408a2639c2b42fcfed83ecc03c3f2b404"
+      "sha256": "ffb660aa61b4d9146e4979cda1aaf5dd094d2bd9bcbce06aba1a4d5edd076264"
     },
     {
       "path": "datasets/__init__.py",
@@ -51,7 +51,7 @@
     },
     {
       "path": "datasets/e6_custom_v1/README.md",
-      "sha256": "05a9498db68d099fa4fcc993e036c53342aaad60a43f7910491cb76763adcf5f"
+      "sha256": "8966ff5e4d363defd68dd04158b12cf9a8f34a1dd5ef160ea5de9b7560085a02"
     },
     {
       "path": "datasets/e6_custom_v1/__init__.py",
@@ -75,11 +75,11 @@
     },
     {
       "path": "datasets/e6_custom_v1/manifest.json",
-      "sha256": "bc561c6e5804bf7e77426a1bdb277f0190197e65b344f49b53b3d5182973ec86"
+      "sha256": "82e15391411e38da32ca0dbec91facb8b7dc5cdab99bf942eb02a82f32ecae80"
     },
     {
       "path": "datasets/e6_custom_v1/matched_comparison.json",
-      "sha256": "1707548ec670a4b3051f8dd3f4b1859429d793e2862dc232c24492d24256eeea"
+      "sha256": "4f95e2c1f6c6633c09119e42c6826b6f6b48fd707ac63bcb5a3d8e64394c3e9b"
     },
     {
       "path": "datasets/e6_custom_v1/protocol.json",
@@ -98,8 +98,12 @@
       "sha256": "22c2795b9a836b44a64d37977461fedb42902b3b09d63c7a3ea1de08982b6f50"
     },
     {
+      "path": "docs/E6_TECHNICAL_REPORT.md",
+      "sha256": "b44ba9837216441648bb8e1564b0c19633fa708ccb27c6ce970699d5ede5486d"
+    },
+    {
       "path": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
-      "sha256": "ac8a3015d30bcd8381cad9fe26c9777e429d3080c4aa600754761d42b9a361aa"
+      "sha256": "971fe0bb1e0b6d9641a4397575a86d0a786a4252c69bd64ef7597b157465ac9f"
     },
     {
       "path": "docs/approved_introduction.md",
@@ -111,19 +115,19 @@
     },
     {
       "path": "figures/README.md",
-      "sha256": "f65c1ef2ba800303fa1017b132f380718d51844553cdc6111398e65f95c222ae"
+      "sha256": "e2ed1dda180fa3f0a8f603bcedccd5b0dcbafc21bbef13479fbc838b2ff89ce8"
     },
     {
       "path": "figures/e6_results.png",
-      "sha256": "1269e85a05f57b2bf87df480ec4e191cfc3bfdb9ee65152bacbfce58890456cd"
+      "sha256": "ebed987d388c02af1f5fdc0ae8065e0b1843328e512fbe91bac4a79f2933424c"
     },
     {
       "path": "figures/e6_results.svg",
-      "sha256": "a92279d1a273bed0f06aad95a7dd3f7b651c585daa2e593ca09ced58cc8e0d17"
+      "sha256": "2077d4a7c9c3559fae62e1b8147c00b2d1c432449c0601b5848b40b000c20711"
     },
     {
       "path": "figures/render_figures.py",
-      "sha256": "d4c397d2a477ef0d41bf5753db63a970c59c4382f68f90185eb58a54e5f4e78e"
+      "sha256": "eac2d228eb834ea685a0eefbc89aaa5d15d1c354adbb618a473a7980de37acb8"
     },
     {
       "path": "method/README.md",
@@ -131,7 +135,11 @@
     },
     {
       "path": "results/README.md",
-      "sha256": "6751cd320c32a795ffcf995deba34a108116f97ca2b6a5ad71c6b14fbabadf84"
+      "sha256": "8062eaad40c87c5d38fb6d151affa05a2bbc32174ea73b5f44e3950498e6a478"
+    },
+    {
+      "path": "results/logic_wrapper_diagnostic.json",
+      "sha256": "8a48456b9030c4953ad1e0504be888fd509d45066d3cd47ed21d45fc3080c8c3"
     },
     {
       "path": "results/pilot1500.csv",

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-25T20:11:20.580198</dc:date>
+    <dc:date>2026-09-25T20:22:21.320688</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -40,7 +40,7 @@ Q 33.426 97.0128 33.426 102.5568
 L 33.426 186.2712
 Q 33.426 191.8152 39.006 191.8152
 z
-" clip-path="url(#p0edcaf4807)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
+" clip-path="url(#p1ebbb37880)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 290.106 191.8152
@@ -53,7 +53,7 @@ Q 284.526 97.0128 284.526 102.5568
 L 284.526 186.2712
 Q 284.526 191.8152 290.106 191.8152
 z
-" clip-path="url(#p0edcaf4807)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
+" clip-path="url(#p1ebbb37880)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 552.366 191.8152
@@ -66,7 +66,7 @@ Q 546.786 97.0128 546.786 102.5568
 L 546.786 186.2712
 Q 546.786 191.8152 552.366 191.8152
 z
-" clip-path="url(#p0edcaf4807)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
+" clip-path="url(#p1ebbb37880)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 39.006 338.7312
@@ -79,7 +79,7 @@ Q 33.426 227.2968 33.426 232.8408
 L 33.426 333.1872
 Q 33.426 338.7312 39.006 338.7312
 z
-" clip-path="url(#p0edcaf4807)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
+" clip-path="url(#p1ebbb37880)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 290.106 338.7312
@@ -92,7 +92,7 @@ Q 284.526 227.2968 284.526 232.8408
 L 284.526 333.1872
 Q 284.526 338.7312 290.106 338.7312
 z
-" clip-path="url(#p0edcaf4807)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
+" clip-path="url(#p1ebbb37880)" style="fill: #edf5f7; stroke: #bacbd3; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="fill: #183549; font: 700 23px 'DejaVu Sans'; text-anchor: start" x="35.1" y="32.148" transform="rotate(-0 35.1 32.148)">E6: learning computable representations</text>
@@ -186,7 +186,7 @@ L 652.08 220.148292
   </g>
  </g>
  <defs>
-  <clipPath id="p0edcaf4807">
+  <clipPath id="p1ebbb37880">
    <rect x="7.2" y="7.2" width="781.2" height="443.52"/>
   </clipPath>
  </defs>

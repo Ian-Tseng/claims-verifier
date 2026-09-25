@@ -99,6 +99,8 @@
     "No new expert review",
     "No independent replication",
     "No claim of held-out unfamiliar-source performance",
-    "Base-model pretraining overlap unknown"
-  ]
+    "Base-model pretraining overlap unknown",
+    "Strict Original logic score includes 100 missing answer wrappers; a separate post hoc diagnostic recovers 29 correct values"
+  ],
+  "format_diagnostic": "../../results/logic_wrapper_diagnostic.json"
 }

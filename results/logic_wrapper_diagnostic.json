@@ -1,0 +1,21 @@
+{
+  "protocol": "posthoc-bare-logic-answer-object-v1",
+  "strict_scores_unchanged": true,
+  "rule": "On logic rows only, recognize a bare object with exactly answer:list of sorted unique exact integers when final_answer wrapper is absent. Compare values unchanged with gold. Apply identical rule to both arms. No map or answer repair.",
+  "scope": "Post hoc output-contract diagnostic, not a new independent benchmark result",
+  "arms": {
+    "original": {
+      "rows": 300,
+      "eligible_bare_logic_objects": 100,
+      "diagnostic_correct": 98,
+      "bare_logic_correct": 29
+    },
+    "e6_set": {
+      "rows": 300,
+      "eligible_bare_logic_objects": 0,
+      "diagnostic_correct": 268,
+      "bare_logic_correct": 0
+    }
+  },
+  "source_sha256": "1bb9dff221483ddd1e1bf405271c9e25d7ef0dacf891c29706ff94ccc3315190"
+}

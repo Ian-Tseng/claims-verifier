@@ -1,6 +1,6 @@
 # E6 figures
 
-`architecture.svg` and `architecture.png` at the repository root describe the current E6 experiment. `e6_results.svg` and `e6_results.png` display the saved E6 development aggregate. Pending Original results are not represented as zero.
+`architecture.svg` and `architecture.png` at the repository root describe the current E6 experiment. `e6_results.svg` and `e6_results.png` display the saved E6 development aggregate. The completed Original/E6 comparison uses strict scoring. Original's logic score is zero because all 100 outputs omit the required wrapper; a separate diagnostic recovers 29 correct bare answers. The figure labels this limitation.
 
 To rebuild (optional plotting dependency):
 

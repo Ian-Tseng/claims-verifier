@@ -2,7 +2,7 @@
 
 The public repository is `Ian-Tseng/claims-verifier`. It contains the files listed in the release manifest: descriptions, aggregate results, diagrams, standalone educational examples, and the explicitly authorized datasets/e6_custom_v1 release. This dataset exception was authorized on 2026-09-25.
 
-The core snapshot is prepared for `Ian-Tseng/claims-verifier-core`, a separate private repository. Upload is pending owner confirmation. Do not move the private workspace's Git history into this repository. Never publish checkpoints, model files, unreleased training datasets, raw benchmark responses, local process records, credentials, or internal file paths through this showcase.
+The full training infrastructure, model weights and raw model responses are outside this public release. New transfer work and collaborator-provided material are also excluded. Any further release requires an explicit scope decision. Do not import private Git history, local process records, credentials or internal file paths into this repository.
 
 Public example code must remain self-contained and clearly labeled as an illustration. The E6 dataset utility is separately labeled as an actual bounded executor/scoring contract; it is not the full training pipeline. No example implies access to a production API or trained model. Private implementation access and any separate commercial terms require an agreement with the repository owner. The public MIT license covers the supplied public files only.
 

@@ -40,7 +40,7 @@ def build():
     ax.text(.5,.67,"Boundary: this comparison does not establish transfer to unseen source material or isolate a causal set-map benefit.",color=GRAY,fontsize=11)
     for ext in ("svg","png"): fig.savefig(ROOT/("architecture."+ext),dpi=150,bbox_inches="tight",facecolor="white")
     plt.close(fig)
-    labels=["Math", "Programming", "Logic", "Overall"]
+    labels=["Math", "Programming", "Logic*", "Overall"]
     keys=["math","programming","logic","all"]
     fig,ax=plt.subplots(figsize=(11,6),facecolor="white")
     e=[100*e6["groups"][k]["answer_correct"]/e6["groups"][k]["rows"] for k in keys]
@@ -56,8 +56,8 @@ def build():
     ax.set_title("E6 custom development results",loc="left",fontsize=20,weight="bold",pad=22,color=NAVY)
     ax.spines[["top","right"]].set_visible(False);ax.grid(axis="y",alpha=.18);ax.set_axisbelow(True)
     ax.legend(loc="upper right",frameon=False)
-    fig.text(.125,.015,"300 previously inspected development tasks / 100 per domain / single seed\n"+("Matched Original/E6 comparison; not unseen-source transfer." if paired else "Original matched result pending; missing results are not plotted as zero."),fontsize=10,color=GRAY)
-    fig.subplots_adjust(bottom=.18,top=.85)
+    fig.text(.125,.015,"300 previously inspected development tasks / 100 per domain / single seed\n"+("Strict output contract. *Original logic: 29/100 correct bare answers (post hoc diagnostic)." if paired else "Original matched result pending; missing results are not plotted as zero."),fontsize=10,color=GRAY)
+    fig.subplots_adjust(bottom=.20,top=.85)
     for ext in ("svg","png"):fig.savefig(ROOT/"figures"/("e6_results."+ext),dpi=150,bbox_inches="tight",facecolor="white")
     plt.close(fig)
     for svg in (ROOT/"architecture.svg", ROOT/"figures/e6_results.svg"):

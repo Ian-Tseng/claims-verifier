@@ -17,17 +17,21 @@ All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. An
 
 ## Result interpretation
 
+**Output formatting accounts for part of the difference.** Original returned a bare `{"answer": [...]}` object on all 100 logic tasks instead of the required `{"final_answer": {"answer": [...]}}`. Strict scoring therefore gives Original 0/100 on logic. A post hoc diagnostic, applied to both models without changing answer values, recognizes 29 correct bare logic answers: Original becomes 98/300 (32.67%), while E6 remains 268/300 (89.33%). This diagnostic does not replace the official scores or establish general logical competence. [Diagnostic rule and counts](logic_wrapper_diagnostic.json).
+
 E6 answers **268/300 development tasks correctly (89.33%)**. It performs best on math (98/100), followed by logic (88/100) and programming (82/100). The domain differences identify where this custom-task evaluation succeeds and where errors remain.
 
 **Answer accuracy and map validity are different outcomes.** All 300 outputs parse as JSON; 267 satisfy the strict reference-map contract. A valid map must match the supported task-bound structure. This count does not establish faithful interpretation of arbitrary paragraphs, and correct final answers do not necessarily contain valid maps.
 
-**The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control has completed and passed replay. This comparison measures the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It will not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
+**The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control has completed and passed replay. This comparison measures the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It does not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
 
-**Transfer remains unresolved.** Success here does not establish useful gains on unfamiliar source material, MATH-500, or fact verification. Source-to-map translation, execution, evidence selection and output-format failures remain competing explanations. We plan to measure those stages separately before choosing targeted changes; these diagnostics are not evidence that the transfer gap is already solved.
+These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
 This is one training seed with automated checking and no expert review. Broader robustness and independent reproduction remain unestablished. The earlier E1 result is retained below as historical evidence rather than a substitute baseline.
 
 The earlier E1 pilot below uses another evaluation cohort and protocol. Its percentages must not be used as E6's matched baseline.
+
+Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wrong=32. See [comparison evidence](../datasets/e6_custom_v1/matched_comparison.json).
 
 ## Historical E1 pilot
 
@@ -80,6 +84,4 @@ This is a single-seed procedural pilot. It does not establish biological plausib
 - [Compact benchmark table](pilot1500.csv)
 - [Aggregate provenance](provenance.json)
 
-The private experiment stores raw responses, completion records, and source identities. The public snapshot contains aggregate results only, so its hashes support version tracking without providing an independently executable reproduction.
-
-Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wrong=32. See [comparison evidence](../datasets/e6_custom_v1/matched_comparison.json).
+The private experiment stores raw responses, completion records, and source identities. The historical E1 snapshot contains aggregate results only, so its hashes support version tracking without providing an independently executable reproduction. The separately released E6 dataset includes reference targets and utilities, but not the full trainer, weights or raw evaluation responses.
