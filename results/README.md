@@ -13,11 +13,11 @@ E6 was trained on 1,500 synthetic tasks and evaluated at the fixed update-100 ch
 
 ![E6 development results](../figures/e6_results.png)
 
-All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. Answer correctness is scored separately from map validity. These are single-seed development results, not evidence of reliable transfer to unseen source material or a causal benefit from set representations. See the [dataset and protocol](../datasets/e6_custom_v1/README.md) and [saved aggregate](../datasets/e6_custom_v1/e6_update100_summary.json).
+All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. Answer correctness is scored separately from map validity. These are single-seed development results, not evidence of reliable transfer to unseen source material or a causal benefit from set representations. See the [dataset and protocol](../datasets/e6_custom_v1/README.md) and [saved aggregate](e6_custom_v1/e6_update100_summary.json).
 
 ## Result interpretation
 
-**Output formatting accounts for part of the difference.** Original returned a bare `{"answer": [...]}` object on all 100 logic tasks instead of the required `{"final_answer": {"answer": [...]}}`. Strict scoring therefore gives Original 0/100 on logic. A post hoc diagnostic, applied to both models without changing answer values, recognizes 29 correct bare logic answers: Original becomes 98/300 (32.67%), while E6 remains 268/300 (89.33%). This diagnostic does not replace the official scores or establish general logical competence. [Diagnostic rule and counts](logic_wrapper_diagnostic.json).
+**Output formatting accounts for part of the difference.** Original returned a bare `{"answer": [...]}` object on all 100 logic tasks instead of the required `{"final_answer": {"answer": [...]}}`. Strict scoring therefore gives Original 0/100 on logic. A post hoc diagnostic, applied to both models without changing answer values, recognizes 29 correct bare logic answers: Original becomes 98/300 (32.67%), while E6 remains 268/300 (89.33%). This diagnostic does not replace the official scores or establish general logical competence. [Diagnostic rule and counts](e6_custom_v1/logic_wrapper_diagnostic.json).
 
 E6 answers **268/300 development tasks correctly (89.33%)**. It performs best on math (98/100), followed by logic (88/100) and programming (82/100). The domain differences identify where this custom-task evaluation succeeds and where errors remain.
 
@@ -29,13 +29,13 @@ These results demonstrate improved performance on custom tasks, but a gap remain
 
 This is one training seed with automated checking and no expert review. Broader robustness and independent reproduction remain unestablished.
 
-Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wrong=32. See [comparison evidence](../datasets/e6_custom_v1/matched_comparison.json).
+Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wrong=32. See [comparison evidence](e6_custom_v1/matched_comparison.json).
 
 ## Evidence files
 
-- [Matched Original/E6 aggregate](../datasets/e6_custom_v1/matched_comparison.json)
-- [E6 update100 summary](../datasets/e6_custom_v1/e6_update100_summary.json)
-- [Output-format diagnostic](logic_wrapper_diagnostic.json)
+- [Matched Original/E6 aggregate](e6_custom_v1/matched_comparison.json)
+- [E6 update100 summary](e6_custom_v1/e6_update100_summary.json)
+- [Output-format diagnostic](e6_custom_v1/logic_wrapper_diagnostic.json)
 - [Dataset and protocol](../datasets/e6_custom_v1/README.md)
 
 The release includes reference targets and utilities, but not the full trainer, model weights or raw evaluation responses. Saved-output replay is not independent reproduction of training or inference.

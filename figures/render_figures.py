@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "datasets/e6_custom_v1"
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 12, "svg.fonttype": "none"})
+RESULTS = ROOT / "results/e6_custom_v1"
+plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 12, "svg.fonttype": "none", "svg.hashsalt": "claims-verifier-e6-v1"})
 NAVY, TEAL, GRAY = "#183549", "#087f8c", "#5f7080"
 
 def build():
-    e6 = json.loads((DATA / "e6_update100_summary.json").read_text())
-    paired_path = DATA / "matched_comparison.json"
+    e6 = json.loads((RESULTS / "e6_update100_summary.json").read_text())
+    paired_path = RESULTS / "matched_comparison.json"
     paired = json.loads(paired_path.read_text()) if paired_path.exists() else None
     if paired and (paired["rows"] != 300 or not paired["audit_passed"]):
         raise ValueError("Incomplete comparison cannot be rendered")
@@ -38,7 +38,7 @@ def build():
     ax.text(.5,1.35,"Representation",weight="bold",color=NAVY)
     ax.text(2.6,1.35,"Signed cardinalities (math) / indexed relations (programming) / finite-set logic",color=GRAY,fontsize=11)
     ax.text(.5,.67,"Boundary: this comparison does not establish transfer to unseen source material or isolate a causal set-map benefit.",color=GRAY,fontsize=11)
-    for ext in ("svg","png"): fig.savefig(ROOT/("architecture."+ext),dpi=150,bbox_inches="tight",facecolor="white")
+    for ext in ("svg","png"): fig.savefig(ROOT/("architecture."+ext),dpi=150,bbox_inches="tight",facecolor="white", metadata={"Date": None} if ext == "svg" else None)
     plt.close(fig)
     labels=["Math", "Programming", "Logic*", "Overall"]
     keys=["math","programming","logic","all"]
@@ -58,7 +58,7 @@ def build():
     ax.legend(loc="upper right",frameon=False)
     fig.text(.125,.015,"300 previously inspected development tasks / 100 per domain / single seed\n"+("Strict output contract. *Original logic: 29/100 correct bare answers (post hoc diagnostic)." if paired else "Original matched result pending; missing results are not plotted as zero."),fontsize=10,color=GRAY)
     fig.subplots_adjust(bottom=.20,top=.85)
-    for ext in ("svg","png"):fig.savefig(ROOT/"figures"/("e6_results."+ext),dpi=150,bbox_inches="tight",facecolor="white")
+    for ext in ("svg","png"):fig.savefig(ROOT/"figures"/("e6_results."+ext),dpi=150,bbox_inches="tight",facecolor="white", metadata={"Date": None} if ext == "svg" else None)
     plt.close(fig)
     for svg in (ROOT/"architecture.svg", ROOT/"figures/e6_results.svg"):
         svg.write_text("\n".join(line.rstrip() for line in svg.read_text(encoding="utf-8").splitlines())+"\n",encoding="utf-8",newline="\n")

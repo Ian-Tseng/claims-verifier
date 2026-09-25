@@ -26,6 +26,16 @@ The E6 result concerns generated mathematics, programming and finite-set logic t
 
 This release does not report downstream fact-verification comparisons or establish reliable transfer to unseen sources.
 
+## Repository layout
+
+| Folder | Contents |
+|---|---|
+| [datasets](datasets/README.md) | Frozen training/development data, loader, scorer and provenance |
+| [results](results/README.md) | Current E6 comparison, result evidence and interpretation |
+| [figures](figures/README.md) | Rendered results and the figure generator; architecture images are at the root |
+| [docs](docs/E6_TECHNICAL_REPORT.md) | Technical report and release boundary |
+| [demo](demo/index.html) | Standalone educational illustration |
+
 ## License and citation
 
 The [MIT license](LICENSE) covers the materials supplied in this public repository, including its educational demonstrations and the E6 synthetic dataset and utilities. The full training pipeline and model weights are not included. Third-party models and datasets retain their own licenses. See [CITATION.cff](CITATION.cff) for a repository citation; this project does not claim an accepted paper or DOI.

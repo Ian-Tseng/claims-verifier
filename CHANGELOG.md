@@ -2,6 +2,10 @@
 
 ## 0.2.0 - 2026-09-25
 
+- Group current model evidence under `results/e6_custom_v1`; keep frozen dataset and loader paths stable.
+- Separate the source-provenance ledger and add a dataset navigation page.
+- Make repeated SVG figure builds stable within the same plotting environment.
+
 - Publish the frozen E6 v1 synthetic training/development dataset and MIT-licensed reusable loader, bounded executor, scorer and validator.
 - Record E6 update100 and its matched Original control on the same 300 development tasks.
 - Include checksums and portable protocol settings.

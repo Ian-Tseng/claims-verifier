@@ -44,10 +44,11 @@ Run these imports from this repository root to avoid conflicts with an installed
 | `responses.dependency_control` | Matched legacy map target; its inclusion does not imply a completed control training run |
 | `ir.py`, `dataset.py` | Bounded executor, frozen scoring functions, loader and release validator |
 | `protocol.json` | Training and evaluation settings, with a portable model identifier |
-| `manifest.json` | Checksums, sizes, counts, coverage and source provenance |
-| `e6_update100_summary.json` | Full 300-row development aggregate for the fixed update-100 checkpoint |
+| `manifest.json` | Dataset checksums, sizes, counts and coverage |
+| `source_provenance.json` | Detailed source-input and generator-code identity ledger |
+| [Result evidence](../../results/e6_custom_v1/README.md) | E6 summary, matched Original comparison and format diagnostic |
 
-The two JSONL files are byte-identical to the frozen experiment files. Their SHA-256 values are recorded in the manifest. The source-file ledger uses repository-relative paths; it identifies private generator sources without implying those sources are included. Released files use this repository's **MIT license** (see `LICENSE`). This grant covers the supplied synthetic records and utility code; third-party model weights retain their own terms.
+The two JSONL files are byte-identical to the frozen experiment files. Their SHA-256 values are recorded in the manifest. The separate `source_provenance.json` ledger uses repository-relative paths; it identifies private generator sources without implying those sources are included. Released files use this repository's **MIT license** (see `LICENSE`). This grant covers the supplied synthetic records and utility code; third-party model weights retain their own terms.
 
 ## Representation and scoring
 

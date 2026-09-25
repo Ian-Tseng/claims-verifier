@@ -18,7 +18,7 @@ Each model receives the same task prompt and generates its own response. Final-a
 
 Training contains 1,500 tasks, with 500 per domain. Development contains 300 different instances, with 100 per domain. The development instances were previously inspected; this is not an independent held-out test. E6 starts from Original Qwen3-8B with a fresh LoRA adapter. The fixed final checkpoint follows 100 optimizer updates, one pass through training, using seed 42, learning rate 0.0001, a task batch of 15, microbatch size 1, and a 2,048-token training limit. LoRA uses rank 16, alpha 32 and dropout 0.05. Training uses BF16 and SDPA attention.
 
-The Original control uses the same base revision without an adapter. Evaluation matches ordered task IDs, prompts, codebook, base revision, scorer, greedy decoding, disabled thinking, a 1,024-token generation cap and a 4,096-token context limit. All 600 saved responses passed identity checks and frozen-score replay. This is verification of saved experiment artifacts, not an independent rerun of training or inference. The [protocol](../datasets/e6_custom_v1/protocol.json) and [matched aggregate](../datasets/e6_custom_v1/matched_comparison.json) record configuration and provenance.
+The Original control uses the same base revision without an adapter. Evaluation matches ordered task IDs, prompts, codebook, base revision, scorer, greedy decoding, disabled thinking, a 1,024-token generation cap and a 4,096-token context limit. All 600 saved responses passed identity checks and frozen-score replay. This is verification of saved experiment artifacts, not an independent rerun of training or inference. The [protocol](../datasets/e6_custom_v1/protocol.json) and [matched aggregate](../results/e6_custom_v1/matched_comparison.json) record configuration and provenance.
 
 ## Results
 
@@ -40,7 +40,7 @@ Original returns a bare `{"answer": [...]}` object on all 100 logic tasks, rathe
 | Frozen strict scoring | 23.00% | 89.33% |
 | Post hoc bare-logic-wrapper diagnostic | 32.67% | 89.33% |
 
-The diagnostic recovers 29 correct Original logic answers. It leaves strict scores unchanged and is not a new independent benchmark. It shows why the strict 0/100 logic result cannot be read as an absence of logical ability. See the [diagnostic rule and counts](../results/logic_wrapper_diagnostic.json).
+The diagnostic recovers 29 correct Original logic answers. It leaves strict scores unchanged and is not a new independent benchmark. It shows why the strict 0/100 logic result cannot be read as an absence of logical ability. See the [diagnostic rule and counts](../results/e6_custom_v1/logic_wrapper_diagnostic.json).
 
 ## Limits and next evaluation
 
