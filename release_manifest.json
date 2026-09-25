@@ -23,7 +23,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c3294ab098f52e61178a5c4ccac3c1dccc41bb68cc1a02d63d06c8c62f2d30e7"
+      "sha256": "10c05a1fb29deefe689ba519cd3006e4a37c8db01a78b7520001b914488a8529"
     },
     {
       "path": "architecture.mmd",
@@ -111,7 +111,7 @@
     },
     {
       "path": "results/README.md",
-      "sha256": "8d04ce75a7bf32c081f2c637d4350f0083f12a95c5e3c52e4702dfa7d1c4981e"
+      "sha256": "d4bb45a4b1eeebd72fc304006ac8d0fc1ea2f56c9a3478fb6789dbb9a41f43a1"
     },
     {
       "path": "results/e6_custom_v1/README.md",

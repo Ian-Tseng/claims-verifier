@@ -38,4 +38,4 @@ Matched paired outcomes: both_correct=69, original_only=0, e6_only=199, both_wro
 - [Output-format diagnostic](e6_custom_v1/logic_wrapper_diagnostic.json)
 - [Evaluation dataset](../datasets/e6_evaluation_v1/README.md)
 
-The current release includes evaluation task inputs and gold answers. It excludes training data, method-specific prompts, reference maps, the executor, model weights and raw evaluation responses. Saved-output replay is not independent reproduction of training or inference.
+The current release includes task inputs and gold answers for **1,500 training and 300 development tasks**. Complete method-specific training records, prompts, reference maps, the method-specific implementation, model weights and raw evaluation responses are excluded. Saved-output replay is not independent reproduction of training or inference.

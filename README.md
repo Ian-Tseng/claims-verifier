@@ -2,11 +2,11 @@
 
 We study whether language models can learn computable representations of a problem and use them to produce verifiable answers. Our goal is to extend this approach to claims and evidence in source material.
 
-E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and logic tasks** using set-based representations. On the same **300 development tasks**, E6 at the fixed update-100 checkpoint scored **89.33% (268/300)**, compared with **23.00% (69/300)** for Original Qwen3-8B, under matched prompts, decoding and strict answer scoring. These are previously inspected instances of familiar task families. Output formatting affects this comparison; see the [result interpretation](results/README.md#result-interpretation).
+E6 is our fine-tuned Qwen3-8B model, trained on **1,500 custom mathematics, programming and logic tasks** using set and relational representations. On the same **300 development tasks**, E6 at the fixed update-100 checkpoint scored **89.33% (268/300)**, compared with **23.00% (69/300)** for Original Qwen3-8B, under matched prompts, decoding and strict answer scoring. These are previously inspected instances of familiar task families. Output formatting affects this comparison; see the [result interpretation](results/README.md#result-interpretation).
 
 These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
-The [limited-disclosure dataset release](datasets/README.md) contains task inputs and gold answers for 1,500 training tasks and 300 development tasks. Method-specific prompts, representation-training targets, reference maps and the executor are excluded. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the reported comparison and its limitations.
+We publish task inputs and gold answers for **1,500 training and 300 development tasks** in the [limited-disclosure dataset release](datasets/README.md). Model weights and method-specific training targets, prompts, reference maps and implementation are not included. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the reported comparison and its limitations.
 
 ![E6 architecture and evaluation boundary](architecture.png)
 
