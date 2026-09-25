@@ -1,2 +1,5 @@
 * text=auto eol=lf
 *.png binary
+
+# Frozen JSONL bytes retain their source line endings for reproducible hashes.
+datasets/e6_custom_v1/*.jsonl -text whitespace=trailing-space,space-before-tab,cr-at-eol

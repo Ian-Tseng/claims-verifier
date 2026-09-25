@@ -1,0 +1,68 @@
+{
+  "experiment": "E6",
+  "base_model": "Qwen/Qwen3-8B",
+  "base_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "arms": [
+    "e6_set"
+  ],
+  "initialization": "Original Qwen3-8B plus identical fresh LoRA, no E1/E5 adapter",
+  "seed": 42,
+  "precision": "bf16",
+  "amp": true,
+  "attention": "sdpa",
+  "training": {
+    "updates": 100,
+    "batch_tasks": 15,
+    "microbatch": 1,
+    "gradient_accumulation": 15,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "clip_norm": 1.0,
+    "scheduler": "constant",
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "max_sequence_tokens": 2048,
+    "loss": "mean_assistant_token_loss_per_example_then_mean_over_15",
+    "checkpoint_every_update": true
+  },
+  "evaluation": {
+    "updates": [
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "development_tasks": 300,
+    "max_new_tokens": 1024,
+    "max_context_tokens": 4096,
+    "batch_size": 1,
+    "do_sample": false,
+    "enable_thinking": false,
+    "selection": "fixed_final_update100",
+    "no_heldout_test_in_this_training_run": true
+  },
+  "evidence_role": "single_seed_automated_development",
+  "expert_reviews": 0,
+  "paper_table_eligible": false,
+  "next_stage": "SciFact-specific adaptation after protocol/data/review gates; not auto-launched by this runner",
+  "release_notes": "dependency_control targets are supplied for reuse; this release reports only E6, not a completed matched dependency-control training run."
+}

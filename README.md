@@ -1,39 +1,31 @@
 # Claims Verifier
 
-AI research has long debated whether to follow symbolic reasoning or biologically inspired learning mechanisms. We explore how these directions can work together by training neural networks to learn symbolic representations. Our goal is for a network to represent the terms, components, and relationships in a sentence or paragraph using symbols, then generate a structured map that supports logical computation to derive the desired answer.
+We study whether language models can learn computable representations of a problem and use them to produce verifiable answers. Our goal is to extend this approach to claims and evidence in source material.
 
-In this pilot study, we fine-tune Qwen3-8B using LoRA on a custom dataset of 1,500 procedurally generated, verifiable mathematics, programming, and logic tasks. We compare training on verified symbolic maps and answers with answer-only supervised fine-tuning, using the same training tasks for both approaches. After selecting checkpoints based on final-answer accuracy on 300 separate development tasks, we evaluate both models on 1,500 held-out test tasks. Our method achieves 31.3% final-answer accuracy, compared with 21.7% for the answer-only baseline, an improvement of 9.7 percentage points.
+E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and logic tasks** using set-based representations. At the fixed update-100 checkpoint, it answered **268 of 300 development tasks correctly (89.33%)**. These were separate instances of familiar task families, previously inspected during development. The matched Original Qwen3-8B comparison is still being completed.
 
-We aim to continue training this model on fact-checking and claim-verification datasets using the same symbolic-representation approach. The goal is to represent claims, evidence, and their relationships in maps that support explicit verification.
+This result shows performance within the custom task families; reliable transfer to unseen source material remains an open research problem. We are investigating source-to-representation translation, execution and output-format failures separately.
 
-![Training and evaluation architecture](architecture.png)
-
-## Start here
-
-- [Method and equations](method/README.md): symbolic maps, supervision, and the training/evaluation distinction.
-- [Pilot results](results/README.md): aggregate results, domain breakdown, uncertainty, and costs.
-- [Benchmark status](benchmarks/README.md): completed procedural testing and the MATH-500 transfer test.
-- [Interactive illustration](demo/index.html): download the repository and open this file in a browser.
-- [Example usage](example_usage.py): a small, standalone arithmetic-map demonstration.
+The [dataset and reusable tools](datasets/e6_custom_v1/README.md) include prompts, reference maps, answers, a bounded executor and scoring utilities. The [earlier E1 pilot](results/README.md) is preserved as historical evidence and uses a different evaluation protocol.
 
 ```bash
-python example_usage.py
+python -B -m datasets.e6_custom_v1.dataset validate
 ```
 
-The example and browser demo illustrate symbolic computation. They do not load the trained model or reproduce the pilot.
+![E6 architecture and evaluation boundary](architecture.png)
 
-## Public showcase, private implementation
+![E6 development results](figures/e6_results.png)
 
-This repository contains the research overview, aggregate evidence, equations, and educational demonstrations. The model training pipeline, candidate collector, task verifiers, datasets, experiment logs, and trained adapters belong to the private implementation. The core scripts are maintained separately. A private source repository is prepared; its upload is pending owner confirmation.
-
-The public materials support inspection of the approach and its reported results. Full experiment reproduction requires access to the private implementation and artifacts. This repository provides no hosted verification API.
+- [Pilot results](results/README.md): E6 development results and the historical E1 pilot.
+- [Benchmark status](benchmarks/README.md): completed evaluations, pending comparisons and transfer limits.
+- [Illustration](demo/index.html): a standalone symbolic-computation demo; download and open it in a browser. It does not run the trained model.
 
 ## Research scope
 
-The completed pilot concerns generated mathematics, programming, and finite-set logic tasks. Biological inspiration motivates the research direction; the pilot does not test biological plausibility or establish mastery of arbitrary natural-language claims. The overall gain differs by domain, including lower programming accuracy. See the [result interpretation](results/README.md#interpretation) before drawing broader conclusions.
+The E6 result concerns generated mathematics, programming and finite-set logic tasks. It does not establish mastery of arbitrary natural-language claims. The earlier E1 pilot has separate results and limitations, including a programming decline; see the [result interpretation](results/README.md#result-interpretation) and the separately labeled E1 findings.
 
-Fact-checking and claim verification are planned extensions. The project has not yet established performance on those tasks.
+This release does not report downstream fact-verification comparisons or establish reliable transfer to unseen sources.
 
 ## License and citation
 
-The [MIT license](LICENSE) covers the materials supplied in this public repository, including its educational demonstrations. It does not grant access to unpublished implementation or model weights. Third-party models and datasets retain their own licenses. See [CITATION.cff](CITATION.cff) for a repository citation; this project does not claim an accepted paper or DOI.
+The [MIT license](LICENSE) covers the materials supplied in this public repository, including its educational demonstrations and the E6 synthetic dataset and utilities. The full training pipeline and model weights are not included. Third-party models and datasets retain their own licenses. See [CITATION.cff](CITATION.cff) for a repository citation; this project does not claim an accepted paper or DOI.

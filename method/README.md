@@ -1,4 +1,6 @@
-# Method
+# Historical E1 method
+
+This page preserves the earlier E1 pilot. The current E6 method uses signed cardinalities, indexed relations and finite-set logic, with fixed update100 and a separate development cohort; see the [E6 dataset card](../datasets/e6_custom_v1/README.md) and [current architecture](../architecture.svg). The collector and checkpoint-selection procedure below must not be attributed to E6.
 
 The research goal is to teach a neural network to represent task components and their relationships using symbols. In the pilot, a symbolic map encodes inputs, operations, and a solver in a restricted task language. Task-specific executors check candidate maps and their answers.
 

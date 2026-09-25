@@ -1,6 +1,18 @@
 # Benchmark status
 
-Status snapshot: 2026-09-07. This page is a versioned report, not a live monitor.
+## E6 release snapshot: 2026-09-25
+
+| Evaluation | Population | State | Evidence boundary |
+|---|---|---|---|
+| E6 update100 | 300 custom development tasks | Complete: 268/300 (89.33%) | Familiar families, previously inspected, single seed |
+| Original matched E6 control | Same 300 tasks and protocol | Pending completion and verification | No partial score used as a final comparison |
+| Reliable unseen-source transfer | New provided source groups | Not established | No claim of resolved transfer from custom-task accuracy |
+
+See [current pilot results](../results/README.md) and [reusable E6 dataset](../datasets/e6_custom_v1/README.md).
+
+## Historical E1 transfer plan
+
+Status snapshot: 2026-09-07. The table below is historical, not a live monitor. A separate [E6 development dataset release](../datasets/e6_custom_v1/README.md) was added on 2026-09-25; it does not update the historical MATH-500 or fact-verification entries below.
 
 | Benchmark | Tasks | Models | State | Result |
 |---|---:|---|---|---|

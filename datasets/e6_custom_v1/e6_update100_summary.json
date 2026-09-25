@@ -1,0 +1,38 @@
+{
+  "arm": "e6_set",
+  "update": 100,
+  "rows": 300,
+  "total": 300,
+  "groups": {
+    "all": {
+      "rows": 300,
+      "answer_correct": 268,
+      "json_valid": 300,
+      "set_reference_contract_valid": 267,
+      "cap_hits": 0
+    },
+    "math": {
+      "rows": 100,
+      "answer_correct": 98,
+      "json_valid": 100,
+      "set_reference_contract_valid": 98,
+      "cap_hits": 0
+    },
+    "programming": {
+      "rows": 100,
+      "answer_correct": 82,
+      "json_valid": 100,
+      "set_reference_contract_valid": 82,
+      "cap_hits": 0
+    },
+    "logic": {
+      "rows": 100,
+      "answer_correct": 88,
+      "json_valid": 100,
+      "set_reference_contract_valid": 87,
+      "cap_hits": 0
+    }
+  },
+  "observed_at": "2026-09-25T19:25:45.538389+08:00",
+  "scientific_config_hash": "383f0dc6970c13169b12541f918f94c104031ba67d9ed3da4168597016ec5f4b"
+}

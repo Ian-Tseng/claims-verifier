@@ -1,5 +1,36 @@
 # Pilot results
 
+## E6: custom development tasks
+
+E6 was trained on 1,500 synthetic tasks and evaluated at the fixed update-100 checkpoint on 300 different, previously inspected development instances from familiar families. The matched Original Qwen3-8B comparison is pending completion and verification.
+
+| Domain | E6 correct / tasks | E6 accuracy | Original |
+|---|---:|---:|---|
+| Math | 98 / 100 | 98.00% | Pending |
+| Programming | 82 / 100 | 82.00% | Pending |
+| Logic | 88 / 100 | 88.00% | Pending |
+| **Overall** | **268 / 300** | **89.33%** | **Pending** |
+
+![E6 development results](../figures/e6_results.png)
+
+All 300 E6 outputs parsed as JSON; 267 met the strict reference-map contract. Answer correctness is scored separately from map validity. These are single-seed development results, not evidence of reliable transfer to unseen source material or a causal benefit from set representations. See the [dataset and protocol](../datasets/e6_custom_v1/README.md) and [saved aggregate](../datasets/e6_custom_v1/e6_update100_summary.json).
+
+## Result interpretation
+
+E6 answers **268/300 development tasks correctly (89.33%)**. It performs best on math (98/100), followed by logic (88/100) and programming (82/100). The domain differences identify where this custom-task evaluation succeeds and where errors remain.
+
+**Answer accuracy and map validity are different outcomes.** All 300 outputs parse as JSON; 267 satisfy the strict reference-map contract. A valid map must match the supported task-bound structure. This count does not establish faithful interpretation of arbitrary paragraphs, and correct final answers do not necessarily contain valid maps.
+
+**The comparison is within familiar task families.** Training uses 1,500 tasks; evaluation uses 300 different instances that were previously inspected during development. The matched Original control remains incomplete. Once verified, that comparison will measure the effect of the complete E6 fine-tuning procedure relative to the unadapted base under the shared output contract. It will not isolate a causal benefit of set maps from additional training or format learning; that requires matched training controls.
+
+**Transfer remains unresolved.** Success here does not establish useful gains on unfamiliar source material, MATH-500, or fact verification. Source-to-map translation, execution, evidence selection and output-format failures remain competing explanations. We plan to measure those stages separately before choosing targeted changes; these diagnostics are not evidence that the transfer gap is already solved.
+
+This is one training seed with automated checking and no expert review. Broader robustness and independent reproduction remain unestablished. The earlier E1 result is retained below as historical evidence rather than a substitute baseline.
+
+The earlier E1 pilot below uses another evaluation cohort and protocol. Its percentages must not be used as E6's matched baseline.
+
+## Historical E1 pilot
+
 The completed procedural pilot compares final-answer accuracy on 1,500 paired test tasks, with 500 tasks each in mathematics, programming, and finite-set logic.
 
 | Model | Correct / tasks | Accuracy |
@@ -35,7 +66,7 @@ The best development accuracy is 33.0% (99/300), at map update 60. Development a
 
 Timings cover the recorded training and candidate collection stages, excluding evaluation and model loading. The answer control also uses oracle-derived labels; zero collection attempts means it does not generate candidate maps.
 
-## Interpretation
+## Historical E1 interpretation
 
 The result supports the full map-training procedure under this pilot protocol. It does not isolate representation structure from longer targets, oracle-assisted corrections, or collection compute. Programming performance declines, so the overall average does not establish an improvement in every domain.
 

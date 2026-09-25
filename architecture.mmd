@@ -1,14 +1,6 @@
 flowchart TB
-  subgraph TRAIN["Pilot training - private implementation"]
-    T["Procedural task + public inputs"] --> M["Qwen3-8B candidate map + answer"]
-    M --> V["Task executor checks candidate"]
-    V -->|"accepted"| S["Map + answer supervision"]
-    V -->|"correction needed"| O["Oracle-assisted corrected target"]
-    O --> M
-    T --> A["Answer-only supervision - control"]
-  end
-  S --> C["Select checkpoint on development answers"]
-  A --> C
-  C --> E["Held-out task - model-generated answer"]
-  E --> R["Post-generation scoring - aggregate results"]
-  R -.-> F["Future: claims + evidence - symbolic verification"]
+  T["1500 synthetic training tasks + checked maps"] --> E["Qwen3-8B + fresh LoRA: E6 fixed update100"]
+  O["Original Qwen3-8B: no adaptation"] --> V["Same 300 development tasks; matched prompts and greedy decoding"]
+  E --> V
+  V --> S["Model-only generation; post-generation answer and map scoring"]
+  S --> B["Previously inspected familiar families; unseen-source transfer unproven"]
