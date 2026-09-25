@@ -2,7 +2,7 @@
 
 This release contains the exact **1,500 training tasks** and **300 development tasks** used in the E6 set-representation experiment, with prompts, answers and two reference target formats. All tasks are procedurally generated synthetic problems. Each split is balanced across mathematics, programming and finite-set logic.
 
-The 300 development tasks use new values or instances of familiar task families. They were repeatedly inspected during development. They are **not an untouched test set, unseen compositions, or evidence of transfer to unfamiliar source material**. This is a different evaluation cohort and protocol from the earlier E1 1,500-test-task pilot in this repository.
+The 300 development tasks use new values or instances of familiar task families. They were repeatedly inspected during development. They are **not an untouched test set, unseen compositions, or evidence of transfer to unfamiliar source material**.
 
 ## Quick start
 
@@ -57,7 +57,7 @@ E6 is a **set-theoretic intermediate representation**, not powerset-only computa
 - Programming uses indexed relations to preserve positions and repeated values, with bounded operations for filtering, aggregation and string transformations.
 - Logic uses subsets of a declared finite universe, with union, intersection, difference and complement. Logic targets are identical across the two supplied formats.
 
-`score` preserves the experiment's distinction between final-answer accuracy and map-contract validity. A correct final answer can score correctly even when its map fails. For math/programming, the executor binds the graph to the source task and checks intermediate values against a specific supported graph structure. It does not recognize every mathematically equivalent program. For logic, historical map validity requires exact canonical equality with the reference; this is a strict reference contract, not a general semantic equivalence test. The model's `verification.passed` field alone is not independent verification.
+`score` preserves the experiment's distinction between final-answer accuracy and map-contract validity. A correct final answer can score correctly even when its map fails. For math/programming, the executor binds the graph to the source task and checks intermediate values against a specific supported graph structure. It does not recognize every mathematically equivalent program. For logic, map validity requires exact canonical equality with the reference; this is a strict reference contract, not a general semantic equivalence test. The model's `verification.passed` field alone is not independent verification.
 
 The release validator checks both target formats' gold answers and executes every E6 reference. It does not fully execute the legacy dependency-control format. Source provenance records checks against the earlier E5 splits; the standalone validator only checks duplicate IDs and task identities within these two released splits. Base-model pretraining overlap is unknown.
 
@@ -72,7 +72,7 @@ E6 started from Original Qwen3-8B with a fresh LoRA adapter and trained for 100 
 | Logic | 88 / 100 | 88.00% | 87 / 100 |
 | **Total** | **268 / 300** | **89.33%** | **267 / 300** |
 
-All 300 outputs parsed as JSON; none hit the generation cap. This is a single-seed automated development result with zero expert reviews. On the same 300 development tasks with matched prompts, decoding and scoring, **Original Qwen3-8B scored 69/300 (23.00%)**, compared with **E6's 268/300 (89.33%)**. Both completed runs passed saved-response identity and score-replay checks. Do not compare this percentage directly with the earlier E1 test percentage. These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
+All 300 outputs parsed as JSON; none hit the generation cap. This is a single-seed automated development result with zero expert reviews. On the same 300 development tasks with matched prompts, decoding and scoring, **Original Qwen3-8B scored 69/300 (23.00%)**, compared with **E6's 268/300 (89.33%)**. Both completed runs passed saved-response identity and score-replay checks. These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
 This package supports task reuse and execution/scoring of supplied targets and new predictions. It does not contain trained adapters, raw model responses, the full generator, or the training pipeline; it is not by itself a complete reproduction of training or the reported model accuracy. The validator cannot independently reproduce an aggregate model result without its predictions and checkpoint.
 

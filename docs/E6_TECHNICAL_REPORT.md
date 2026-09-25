@@ -40,11 +40,11 @@ Original returns a bare `{"answer": [...]}` object on all 100 logic tasks, rathe
 | Frozen strict scoring | 23.00% | 89.33% |
 | Post hoc bare-logic-wrapper diagnostic | 32.67% | 89.33% |
 
-The diagnostic recovers 29 correct Original logic answers. It leaves historical scores unchanged and is not a new independent benchmark. It shows why the strict 0/100 logic result cannot be read as an absence of logical ability. See the [diagnostic rule and counts](../results/logic_wrapper_diagnostic.json).
+The diagnostic recovers 29 correct Original logic answers. It leaves strict scores unchanged and is not a new independent benchmark. It shows why the strict 0/100 logic result cannot be read as an absence of logical ability. See the [diagnostic rule and counts](../results/logic_wrapper_diagnostic.json).
 
 ## Limits and next evaluation
 
-This is a single-seed comparison of an unadapted model with a model receiving additional training. It does not isolate representation choice from training exposure or format learning. The development set covers familiar generated families, has been inspected, and has no expert review. Training-seed stability, independent reproduction and overlap with base-model pretraining remain unestablished. The earlier E1 pilot uses a different cohort and protocol and is not the matched baseline for E6.
+This is a single-seed comparison of an unadapted model with a model receiving additional training. It does not isolate representation choice from training exposure or format learning. The development set covers familiar generated families, has been inspected, and has no expert review. Training-seed stability, independent reproduction and overlap with base-model pretraining remain unestablished.
 
 These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 

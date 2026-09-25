@@ -6,7 +6,7 @@ E6 is a Qwen3-8B model fine-tuned on **1,500 synthetic math, programming and log
 
 These results demonstrate improved performance on custom tasks, but a gap remains in transferring that ability to unfamiliar source material.
 
-The [dataset and reusable tools](datasets/e6_custom_v1/README.md) include prompts, reference maps, answers, a bounded executor and scoring utilities. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the comparison and its limitations. The earlier E1 pilot is retained in the results page as historical evidence.
+The [dataset and reusable tools](datasets/e6_custom_v1/README.md) include prompts, reference maps, answers, a bounded executor and scoring utilities. The [technical report](docs/E6_TECHNICAL_REPORT.md) explains the comparison and its limitations.
 
 ```bash
 python -B -m datasets.e6_custom_v1.dataset validate
@@ -16,13 +16,13 @@ python -B -m datasets.e6_custom_v1.dataset validate
 
 ![E6 development results](figures/e6_results.png)
 
-- [Pilot results](results/README.md): E6 development results and the historical E1 pilot.
+- [Pilot results](results/README.md): Matched Original/E6 development results.
 - [Benchmark status](benchmarks/README.md): completed evaluations, pending comparisons and transfer limits.
 - [Illustration](demo/index.html): a standalone symbolic-computation demo; download and open it in a browser. It does not run the trained model.
 
 ## Research scope
 
-The E6 result concerns generated mathematics, programming and finite-set logic tasks. It does not establish mastery of arbitrary natural-language claims. The earlier E1 pilot has separate results and limitations, including a programming decline; see the [result interpretation](results/README.md#result-interpretation) and the separately labeled E1 findings.
+The E6 result concerns generated mathematics, programming and finite-set logic tasks. It does not establish mastery of arbitrary natural-language claims. See the [result interpretation](results/README.md#result-interpretation) for the output-format diagnostic and limits of the matched comparison.
 
 This release does not report downstream fact-verification comparisons or establish reliable transfer to unseen sources.
 

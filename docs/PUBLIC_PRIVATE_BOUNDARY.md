@@ -13,4 +13,4 @@ Public example code must remain self-contained and clearly labeled as an illustr
 3. Update benchmark status, tables, and the aggregate JSON together.
 4. Check the explicit public file list and scan the staged diff for private artifacts before pushing.
 
-The historical E1 introduction is retained verbatim in `docs/approved_introduction.md`; it is not the current README introduction. The README now leads with the separately scoped E6 result, by owner instruction. Detailed experimental qualifications live in the method and results pages.
+The README, results page and E6 technical report describe the current matched custom-task comparison and its limitations.
