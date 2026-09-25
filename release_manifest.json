@@ -43,11 +43,11 @@
     },
     {
       "path": "datasets/README.md",
-      "sha256": "17e9f59bab9b7e3abc4d5b40976211508dd1c69c9f56843badc9302e051a1033"
+      "sha256": "407e860e196001e6032ac45f3b3b63f63275a61ba08d92502259c970332d8b52"
     },
     {
       "path": "datasets/e6_evaluation_v1/README.md",
-      "sha256": "dfb799f083422991e754c229e63ebc51cb6ca7441734a73f4743838bc135c2a8"
+      "sha256": "f92d835717254e53b1f528e564d1a6a5e56b248e0e11c87dccaf7df2ff4e1f4e"
     },
     {
       "path": "datasets/e6_evaluation_v1/TASKS.md",
@@ -59,7 +59,7 @@
     },
     {
       "path": "datasets/e6_evaluation_v1/manifest.json",
-      "sha256": "eb90f1ad5fd573e2c9ce0e8338473b776311807680b094cd7142747f4c0d52ae"
+      "sha256": "571cb8f31fb8a7159017c9889ff35bb6c77026d656d80126fb8fb39f3d4a3f02"
     },
     {
       "path": "demo/example_map.json",
